@@ -1,0 +1,64 @@
+# Arquivo .gitignore para projeto Node.js + TypeScript + Nodemailer
+
+# Dependências
+/node_modules
+
+# Ambiente
+.env
+.env.test
+.env.local
+
+# Build
+/dist
+/coverage
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs e editores
+/.idea
+.vscode/
+*.swp
+*.swo
+*.swn
+.DS_Store
+
+# Arquivos de sistema
+Thumbs.db
+
+# Testes
+/junit.xml
+
+# Configurações do usuário
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Configurações do projeto
+.settings/
+*.pid
+*.seed
+*.pid.lock
+
+# Documentação
+/docs/
+*.md
+
+# Pacotes
+*.tgz
+
+# Debug
+debug/
+.nyc_output/
+
+# TypeScript
+*.tsbuildinfo
+
+# Arquivos temporários
+temp/
+tmp/
