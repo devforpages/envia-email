@@ -2,7 +2,9 @@
 Testar localmente
 
 npm run start
+npm run build
 
+POST https://sevidor-email.netlify.app/send-email
 post http://localhost:3000/api/send-email
 {
   "subject": "Teste de Envio de E-mail",

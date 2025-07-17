@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
+import { ModelEmail } from '../model/model-email';
 
 dotenv.config();
 

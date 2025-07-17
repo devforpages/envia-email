@@ -1,10 +1,10 @@
-import express from 'express';
-const app = express();
+import app from './app';
+import dotenv from 'dotenv';
 
-app.get('/', (request, response) => {
-  return response.json({ message: 'Hello World!' });
-});
+dotenv.config();
 
-app.listen(3333, () => {
-  console.log('aplicação rodando em http://localhost:3333');
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
