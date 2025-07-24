@@ -17,11 +17,11 @@ const transporter = nodemailer.createTransport({
 
 // Função para enviar e-mail com tipagem forte
 export const sendEmail = async (
-  options: Omit<ModelEmail, 'from' | 'to'>
+  options: Omit<ModelEmail, 'from' | 'to' >
 ): Promise<void> => {
   const mailOptions: ModelEmail = {
-    from: process.env.SMTP_USER,
-    to: process.env.TO_EMAIL,
+    from: process.env.SMTP_USER as string,
+    to: process.env.TO_EMAIL as string,
     ...options
   };
 

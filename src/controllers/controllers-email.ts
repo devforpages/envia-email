@@ -5,13 +5,13 @@ import { ModelEmail } from '../model/model-email';
 class EmailController {
   async sendEmail(req: Request<{}, {}, ModelEmail>, res: Response) {
     try {
-      const { subject, text } = req.body;
+      const { subject, text, replyTo } = req.body;
 
-      if (!subject || !text) {
+      if (!replyTo || !subject || !text ) {
         return res.status(400).json({ error: 'Assunto e texto são obrigatórios' });
       }
 
-      await sendEmail({ subject, text });
+      await sendEmail({ replyTo, subject, text });
 
       res.status(200).json({ message: 'E-mail enviado com sucesso!' });
 
